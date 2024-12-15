@@ -18,8 +18,8 @@ public class LotteryController {
     @Autowired
     LotteryService lotteryService;
 
-    private static int MIN_VALUE = 1;
-    private static int MAX_VALUE = 1000;
+    public static int MIN_VALUE = 1;
+    public static int MAX_VALUE = 1000;
 
     @GetMapping("/participant")
     public List<Participant> getAllParticipants() {
