@@ -1,9 +1,15 @@
 package com.mikhaylov.spring.springboot.nexign_lottery_rest.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "lottery_participants")
+@NoArgsConstructor
+@Getter
+@Setter
 public class Participant {
 
     @Id
@@ -20,44 +26,9 @@ public class Participant {
     @Column(name = "city")
     private String city;
 
-    public Participant() {
-    }
-
     public Participant(String name, int age, String city) {
         this.name = name;
         this.age = age;
-        this.city = city;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
         this.city = city;
     }
 }

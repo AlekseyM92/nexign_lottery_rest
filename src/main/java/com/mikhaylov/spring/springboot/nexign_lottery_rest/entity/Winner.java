@@ -1,11 +1,17 @@
 package com.mikhaylov.spring.springboot.nexign_lottery_rest.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "lottery_winners")
+@NoArgsConstructor
+@Getter
+@Setter
 public class Winner {
 
     @Id
@@ -28,62 +34,11 @@ public class Winner {
     @Column(name = "winning_amount")
     private int winningAmount;
 
-    public Winner() {
-    }
-
     public Winner(String name, int age, String city, LocalDateTime lotteryStartDate, int winningAmount) {
         this.name = name;
         this.age = age;
         this.city = city;
         this.lotteryStartDate = lotteryStartDate;
-        this.winningAmount = winningAmount;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public LocalDateTime getLotteryStartDate() {
-        return lotteryStartDate;
-    }
-
-    public void setLotteryStartDate(LocalDateTime lotteryStartDate) {
-        this.lotteryStartDate = lotteryStartDate;
-    }
-
-    public int getWinningAmount() {
-        return winningAmount;
-    }
-
-    public void setWinningAmount(int winningAmount) {
         this.winningAmount = winningAmount;
     }
 }
