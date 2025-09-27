@@ -32,7 +32,7 @@ public class LotteryGlobalExceptionHandler {
     public ResponseEntity<LotteryExceptionData> handleException(InsufficientNumberOfParticipantsException exception) {
         LotteryExceptionData data = new LotteryExceptionData();
         data.setInfo(exception.getMessage());
-        return new ResponseEntity<>(data, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(data, HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     @ExceptionHandler
