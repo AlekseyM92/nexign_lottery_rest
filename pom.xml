@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.mikhaylov.spring.springboot</groupId>
     <artifactId>nexign_lottery_rest</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>nexign_lottery_rest</name>
     <description>nexign_lottery_rest</description>
     <url/>
